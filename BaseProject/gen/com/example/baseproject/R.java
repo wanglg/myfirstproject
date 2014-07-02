@@ -10,6 +10,86 @@ package com.example.baseproject;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int black=0x7f040000;
+        public static final int blue=0x7f040010;
+        public static final int blue_afd5f2=0x7f040006;
+        public static final int blue_deep=0x7f040008;
+        public static final int blue_e7f1fa=0x7f040007;
+        public static final int blue_image_frame=0x7f04000a;
+        public static final int blue_tint=0x7f040009;
+        public static final int channel_video_detail_info_2nd_focus=0x7f04004c;
+        public static final int channel_video_detail_info_2nd_unfocus=0x7f04004d;
+        public static final int channel_video_detail_info_focus=0x7f04004a;
+        public static final int channel_video_detail_info_unfocus=0x7f04004b;
+        public static final int color_4d000000=0x7f040046;
+        public static final int color_999999=0x7f040047;
+        public static final int color_aaaaaa=0x7f040048;
+        public static final int comment_add_circle_bg=0x7f040030;
+        public static final int comment_list_bg=0x7f040024;
+        public static final int comment_list_circle=0x7f04002f;
+        public static final int comment_list_circle_bg=0x7f04002e;
+        public static final int comment_list_content=0x7f040025;
+        public static final int comment_list_create_time=0x7f040027;
+        public static final int comment_list_user=0x7f040026;
+        public static final int comment_list_verify=0x7f040028;
+        public static final int darkgray=0x7f040005;
+        public static final int detail_brief=0x7f040032;
+        public static final int detail_header_bg=0x7f040031;
+        public static final int edittext_focus=0x7f040045;
+        public static final int edittext_normal=0x7f040044;
+        public static final int feedback_about=0x7f040015;
+        public static final int frame_bg=0x7f040017;
+        public static final int gallery_backgroud=0x7f04000f;
+        public static final int gray=0x7f040012;
+        public static final int info_bar_bg=0x7f04001e;
+        public static final int info_blace_bg=0x7f04001c;
+        public static final int info_gray_bg=0x7f04001a;
+        public static final int info_gray_text=0x7f040019;
+        public static final int info_pop_bg=0x7f04001d;
+        public static final int info_pop_text_gray=0x7f04001f;
+        public static final int info_pop_text_white=0x7f040020;
+        public static final int info_white_text=0x7f04001b;
+        public static final int item_divider=0x7f040043;
+        public static final int item_normal=0x7f040041;
+        public static final int item_press=0x7f040042;
+        public static final int light_white=0x7f040004;
+        public static final int login_dialog_background=0x7f040040;
+        public static final int login_text_focus=0x7f04003f;
+        public static final int login_text_normal=0x7f04003e;
+        public static final int play_history_info=0x7f04003b;
+        public static final int play_history_name=0x7f04003a;
+        public static final int player_gray=0x7f04002d;
+        public static final int player_textcolor=0x7f040023;
+        public static final int player_transparent=0x7f040022;
+        public static final int player_white=0x7f040021;
+        public static final int progressbar_bg_end=0x7f040037;
+        public static final int progressbar_bg_start=0x7f040036;
+        public static final int progressbar_cneter=0x7f040034;
+        public static final int progressbar_end=0x7f040035;
+        public static final int progressbar_start=0x7f040033;
+        public static final int red=0x7f040011;
+        public static final int text_bg_color=0x7f04003d;
+        public static final int text_color=0x7f04003c;
+        public static final int text_color_normal=0x7f040049;
+        public static final int thumbnail_fg=0x7f040018;
+        public static final int timecolor=0x7f040002;
+        public static final int tips_bg=0x7f040013;
+        public static final int title=0x7f04000e;
+        public static final int top_play_button_back=0x7f04000b;
+        public static final int translucent_background=0x7f04000d;
+        public static final int translucent_gray=0x7f04000c;
+        public static final int transparent=0x7f040014;
+        public static final int tv_home_right_bg=0x7f040039;
+        public static final int upload_main_bg=0x7f040029;
+        public static final int upload_main_submit_bg=0x7f04002b;
+        public static final int upload_main_title=0x7f04002a;
+        public static final int upload_main_video_title_none=0x7f04002c;
+        public static final int video_header_btn=0x7f040038;
+        public static final int white=0x7f040001;
+        public static final int white_transparent=0x7f040003;
+        public static final int without_related_result=0x7f040016;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -17,25 +97,29 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bg=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f090002;
+        public static final int toast=0x7f090000;
+        public static final int toastText=0x7f090001;
     }
     public static final class layout {
         public static final int activity_boot=0x7f030000;
+        public static final int toast_layout=0x7f030001;
     }
     public static final class menu {
-        public static final int boot=0x7f070000;
+        public static final int boot=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060002;
     }
     public static final class style {
         /** 
@@ -59,10 +143,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

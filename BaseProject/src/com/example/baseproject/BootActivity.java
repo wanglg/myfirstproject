@@ -10,7 +10,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.view.Menu;
 
-public class BootActivity extends Activity {
+public class BootActivity extends BaseActivity {
 	public final String PACKAGE_NAME="com.example.baseproject";
 	public final String VERSION_KEY="version";
     @Override
@@ -18,6 +18,7 @@ public class BootActivity extends Activity {
         setTheme(android.R.style.Theme_Translucent_NoTitleBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot);
+        showToast("!!!!!ewhjoaihsdohh");
     }
 
     public boolean isFirstInstall(){
@@ -32,9 +33,9 @@ public class BootActivity extends Activity {
     	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
     	int lastVersion = prefs.getInt(VERSION_KEY, 0);
     	if (currentVersion > lastVersion) {
-    	     //хГ╧Ш╣╠г╟╟Ф╠╬╢Ссзио╢н╟Ф╠╬ё╛╦ц╟Ф╠╬йТсз╣зр╩╢нфТ╤╞
+    	     //О©╫О©╫О©╫г╟О©╫Ф╠╬О©╫О©╫О©╫О©╫О©╫о╢н╟Ф╠╬О©╫О©╫О©╫ц╟Ф╠╬О©╫О©╫О©╫з╣О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫
     	  
-    	     //╫╚╣╠г╟╟Ф╠╬п╢хКpreferenceжпё╛тРоб╢нфТ╤╞╣дй╠╨Рё╛╬щ╢кеп╤оё╛╡╩тын╙йв╢нфТ╤╞
+    	     //О©╫О©╫О©╫О©╫г╟О©╫Ф╠╬п╢О©╫О©╫preferenceО©╫пёО©╫О©╫О©╫О©╫б╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╠О©╫Рё╛╬щ╢О©╫О©╫п╤оёО©╫О©╫О©╫О©╫О©╫н╙О©╫в╢О©╫О©╫О©╫О©╫О©╫
     	     prefs.edit().putInt(VERSION_KEY,currentVersion).commit();
     	     return true;
     	}else{
