@@ -7,7 +7,11 @@ import android.net.wifi.WifiManager;
 import android.view.Display;
 
 import com.example.util.LogUtil;
-
+/**
+ * 设备对象
+ * @author xingchen
+ *
+ */
 public class Device {
 	private final String TAG="wang";
 	private static Device device=new Device();

@@ -1,16 +1,16 @@
-package com.example.baseproject;
+package com.example.activity;
 
-import com.example.bean.Device;
-
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 
-public class BootActivity extends Activity {
+import com.example.baseproject.R;
+import com.example.bean.Device;
+
+public class BootActivity extends BaseActivity {
 	public final String PACKAGE_NAME="com.example.baseproject";
 	public final String VERSION_KEY="version";
     @Override
@@ -18,6 +18,7 @@ public class BootActivity extends Activity {
         setTheme(android.R.style.Theme_Translucent_NoTitleBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot);
+        
     }
 
     public boolean isFirstInstall(){
@@ -32,9 +33,6 @@ public class BootActivity extends Activity {
     	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
     	int lastVersion = prefs.getInt(VERSION_KEY, 0);
     	if (currentVersion > lastVersion) {
-    	     //如果当前版本大于上次版本，该版本属于第一次启动
-    	  
-    	     //将当前版本写入preference中，则下次启动的时候，据此判断，不再为首次启动
     	     prefs.edit().putInt(VERSION_KEY,currentVersion).commit();
     	     return true;
     	}else{
