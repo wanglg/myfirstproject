@@ -1,14 +1,14 @@
-package com.example.baseproject;
+package com.example.activity;
 
-import com.example.bean.Device;
-
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
+
+import com.example.baseproject.R;
+import com.example.bean.Device;
 
 public class BootActivity extends BaseActivity {
 	public final String PACKAGE_NAME="com.example.baseproject";
@@ -18,7 +18,7 @@ public class BootActivity extends BaseActivity {
         setTheme(android.R.style.Theme_Translucent_NoTitleBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot);
-        showToast("!!!!!ewhjoaihsdohh");
+        
     }
 
     public boolean isFirstInstall(){
@@ -33,9 +33,6 @@ public class BootActivity extends BaseActivity {
     	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
     	int lastVersion = prefs.getInt(VERSION_KEY, 0);
     	if (currentVersion > lastVersion) {
-    	     //���ǰ�汾�����ϴΰ汾���ð汾���ڵ�һ������
-    	  
-    	     //����ǰ�汾д��preference�У����´�������ʱ�򣬾ݴ��жϣ�����Ϊ�״�����
     	     prefs.edit().putInt(VERSION_KEY,currentVersion).commit();
     	     return true;
     	}else{

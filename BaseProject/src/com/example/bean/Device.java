@@ -8,7 +8,7 @@ import android.view.Display;
 
 import com.example.util.LogUtil;
 /**
- * è®¾å¤‡ä¿¡æ¯ç±»
+ * Éè±¸¶ÔÏó
  * @author xingchen
  *
  */

@@ -1,4 +1,6 @@
-package com.example.baseproject;
+package com.example.activity;
+
+import com.example.baseproject.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -38,18 +40,5 @@ public class BaseActivity extends Activity {
 		localToast.show();
     	
 	}
- /*   public void showToast(String paramString, int paramInt) {
-		LayoutInflater localLayoutInflater = LayoutInflater.from(this);
-		// ViewGroup localViewGroup = (ViewGroup)findViewById(2131427910);
-		View localView = localLayoutInflater.inflate(R.layout.toast_layout,
-				null);
-		((TextView) localView.findViewById(R.id.toastText))
-				.setText(paramString);
-		Toast localToast = new Toast(this);
-		localToast.setDuration(paramInt);
-		localToast.setView(localView);
-		localToast.setGravity(17, 0, 220);
-		localToast.show();
-	}
-*/
+    
 }
