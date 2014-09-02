@@ -1,16 +1,16 @@
 package com.example.activity;
 
-import com.example.baseproject.R;
-
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class BaseActivity extends Activity {
+import com.example.baseproject.R;
+
+public class BaseActivity extends FragmentActivity {
 	public Context mContext;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
