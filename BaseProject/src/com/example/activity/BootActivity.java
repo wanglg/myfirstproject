@@ -1,9 +1,11 @@
 package com.example.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 
@@ -18,9 +20,25 @@ public class BootActivity extends BaseActivity {
         setTheme(android.R.style.Theme_Translucent_NoTitleBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot);
+        initDevice();
+        new Handler().postDelayed(new Runnable() {
+			
+			@Override
+			public void run() { 
+				jump();
+				
+			}
+
+		
+		}, 3000);
         
     }
-
+	private void jump() {
+		Intent intent=new Intent(this,HomeActivity.class);
+		startActivity(intent);
+		finish();
+		
+	}
     public boolean isFirstInstall(){
     	PackageInfo info=null;
 		try {

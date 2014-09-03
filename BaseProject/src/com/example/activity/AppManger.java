@@ -14,5 +14,7 @@ public class AppManger extends Application {
 	public static AppManger getInstant() {
 		return instant;
 	}
+	
+	
 
 }
