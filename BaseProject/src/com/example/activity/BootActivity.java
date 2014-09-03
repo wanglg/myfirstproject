@@ -16,23 +16,21 @@ public class BootActivity extends BaseActivity {
 	public final String PACKAGE_NAME="com.example.baseproject";
 	public final String VERSION_KEY="version";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        setTheme(android.R.style.Theme_Translucent_NoTitleBar);
+	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boot);
-        initDevice();
-        new Handler().postDelayed(new Runnable() {
-			
+		setContentView(R.layout.activity_boot);
+		initDevice();
+		new Handler().postDelayed(new Runnable() {
+
 			@Override
-			public void run() { 
+			public void run() {
 				jump();
-				
+
 			}
 
-		
 		}, 3000);
-        
-    }
+
+	}
 	private void jump() {
 		Intent intent=new Intent(this,HomeActivity.class);
 		startActivity(intent);
