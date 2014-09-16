@@ -8,13 +8,11 @@ public class AppManger extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		instant=this;
+		instant = this;
 	}
-	
+
 	public static AppManger getInstant() {
 		return instant;
 	}
-	
-	
 
 }
