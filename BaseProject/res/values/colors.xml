@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
+    <color name="navbr_title_color">#4b5a68</color>
     <color name="black">#ff000000</color>
     <color name="white">#ffffffff</color>
     <color name="timecolor">#ff46618f</color>
@@ -78,4 +80,5 @@
     <color name="channel_video_detail_info_unfocus">#ffbbbbbb</color>
     <color name="channel_video_detail_info_2nd_focus">#ffff2020</color>
     <color name="channel_video_detail_info_2nd_unfocus">#88ff2020</color>
+
 </resources>
