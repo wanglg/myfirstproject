@@ -3,6 +3,8 @@ package com.example.activity;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,7 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.widget.RelativeLayout;
 
 import com.example.baseproject.R;
 import com.example.fragment.MusicFragment;
@@ -19,30 +20,63 @@ import com.example.fragment.VideoFragment;
 import com.example.fragment.tablisener.TabFragmentListener;
 
 public class HomeActivity extends BaseActivity implements OnClickListener {
-	RelativeLayout bottom_bar_one, bottom_bar_two, bottom_bar_three;
-
+	private ActionBarDrawerToggle mDrawerToggle;
+	private ActionBar actionBar;
+	DrawerLayout mDrawerLayout;
+	private CharSequence mTitle;
+	private CharSequence mDrawerTitle;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.home_layout);
+		setContentView(R.layout.home_layout);
+		initBar();
+		initDrawer();
 		initTab();
-		//initView();
+		
 	}
 
-	private void initView() {
-		bottom_bar_one = (RelativeLayout) findViewById(R.id.video_layout);
-		bottom_bar_two = (RelativeLayout) findViewById(R.id.music_layout);
-		bottom_bar_three = (RelativeLayout) findViewById(R.id.photo_layout);
-		bottom_bar_one.setOnClickListener(this);
-		bottom_bar_two.setOnClickListener(this);
-		bottom_bar_three.setOnClickListener(this);
+	private void initDrawer() {
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mDrawerToggle = new ActionBarDrawerToggle(this, /* host Activity */
+		mDrawerLayout, /* DrawerLayout object */
+		R.drawable.ic_drawer, /* nav drawer image to replace 'Up' caret */
+		R.string.drawer_open, /* "open drawer" description for accessibility */
+		R.string.drawer_close /* "close drawer" description for accessibility */
+		) {
+			public void onDrawerClosed(View view) {
+				actionBar.setTitle(mTitle);
+				invalidateOptionsMenu();
+				/*getActionBar().setTitle(mTitle);
+				invalidateOptionsMenu(); */// creates call to
+											// onPrepareOptionsMenu()
+			}
+
+			public void onDrawerOpened(View drawerView) {
+				
+				invalidateOptionsMenu();
+				/*getActionBar().setTitle(mDrawerTitle);
+				invalidateOptionsMenu(); */// creates call to
+											// onPrepareOptionsMenu()
+			}
+		};
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+
 	}
+	private void initBar(){
+		actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setHomeButtonEnabled(true);
+		mDrawerTitle=mTitle=getTitle();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);  
+	}
+
 
 	private void initTab() {
 
-		ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);  
+		
+
+		
 		Tab tab1=actionBar.newTab().setText("ͼƬ").setTabListener(new 
 				TabFragmentListener<PhotoFragment>(HomeActivity.this, "ͼƬ", PhotoFragment.class));
 		actionBar.addTab(tab1);
@@ -70,6 +104,12 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 		MenuItem searchItem = menu.findItem(R.id.action_search);
 		searchItem.getActionView();
 		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public void setTitle(CharSequence title) {
+		mTitle=title;
+		actionBar.setTitle(mTitle);
 	}
 
 }

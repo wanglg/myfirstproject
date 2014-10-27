@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+    
+    <!-- 侧滑背景色 -->
+    <color name="slide_drawer_background">#DFDFDF</color>
 
     <color name="navbr_title_color">#4b5a68</color>
     <color name="black">#ff000000</color>
