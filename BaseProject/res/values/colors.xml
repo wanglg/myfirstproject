@@ -83,5 +83,8 @@
     <color name="channel_video_detail_info_unfocus">#ffbbbbbb</color>
     <color name="channel_video_detail_info_2nd_focus">#ffff2020</color>
     <color name="channel_video_detail_info_2nd_unfocus">#88ff2020</color>
+    
+    
+     <color name="item_selected_color">#15ABFF</color>
 
 </resources>

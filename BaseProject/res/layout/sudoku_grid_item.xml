@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/gridview_item_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:scaleType="center" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/gridview_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridview_item_image"
+        android:layout_centerHorizontal="true"
+        
+        android:layout_marginTop="5dp" />
+   <ImageView 
+       android:contentDescription="@null"
+       android:background="#DCDCDC" 
+       android:id="@+id/recommend_item_bottomline" 
+       android:layout_below="@id/gridview_item_text"
+       android:layout_marginTop="20dp"
+       android:layout_height="1dp" 
+       android:layout_width="match_parent"/>
+   <!-- android:layout_height="matchparent" enable -->
+    <ImageView 
+       android:contentDescription="@null"
+       android:background="#DCDCDC" 
+       android:id="@+id/recommend_item_rightline" 
+       android:layout_alignBottom="@id/recommend_item_bottomline"
+       android:layout_alignParentRight="true"
+       android:layout_height="1000dp" 
+       android:layout_width="1dp"/>
+
+</RelativeLayout>

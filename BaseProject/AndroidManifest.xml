@@ -27,6 +27,7 @@
         </activity>
            <activity
             android:name="com.example.activity.HomeActivity"
+            android:configChanges="orientation|screenSize"
             >
         </activity>
     </application>

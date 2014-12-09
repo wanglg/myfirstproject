@@ -20,7 +20,8 @@
     </style>
 
     <style name="WindowTitle">
-       <!--  <item name="android:windowTitleSize">@dimen/title_bar_height</item> -->
+
+        <!-- <item name="android:windowTitleSize">@dimen/title_bar_height</item> -->
         <item name="android:singleLine">true</item>
         <item name="android:gravity">center</item>
         <item name="android:textAppearance">@style/Title</item>
@@ -33,9 +34,13 @@
         <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
         <item name="android:windowTitleStyle">@style/WindowTitle</item>
     </style>
-     <style name="AppTheme" parent="android:Theme.Holo.Light">
-       
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light"></style>
+
+    <style name="SudokuTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
-    
 
 </resources>
