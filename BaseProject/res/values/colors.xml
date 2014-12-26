@@ -3,9 +3,9 @@
     
     <!-- 侧滑背景色 -->
     <color name="slide_drawer_background">#DFDFDF</color>
-
     <color name="navbr_title_color">#4b5a68</color>
-    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- <color name="black">#ff000000</color>
     <color name="white">#ffffffff</color>
     <color name="timecolor">#ff46618f</color>
     <color name="white_transparent">#80ffffff</color>
@@ -82,7 +82,7 @@
     <color name="channel_video_detail_info_focus">#ffffffff</color>
     <color name="channel_video_detail_info_unfocus">#ffbbbbbb</color>
     <color name="channel_video_detail_info_2nd_focus">#ffff2020</color>
-    <color name="channel_video_detail_info_2nd_unfocus">#88ff2020</color>
+    <color name="channel_video_detail_info_2nd_unfocus">#88ff2020</color> -->
     
     
      <color name="item_selected_color">#15ABFF</color>

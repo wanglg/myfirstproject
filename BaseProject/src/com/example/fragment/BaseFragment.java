@@ -1,7 +1,7 @@
 package com.example.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 public class BaseFragment extends Fragment {
 	Activity activity;

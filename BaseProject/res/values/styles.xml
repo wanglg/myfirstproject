@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="TextAppearance.Large" parent="@android:style/TextAppearance.Large">
         <item name="android:textColor">#FFFFFFFF</item>
@@ -35,12 +35,23 @@
         <item name="android:windowTitleStyle">@style/WindowTitle</item>
     </style>
 
-    <style name="AppTheme" parent="android:Theme.Holo.Light"></style>
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:listViewStyle">@style/customListViewStyle</item>
+       
+        
+    </style>
 
     <style name="SudokuTheme" parent="@android:style/Theme.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:background">@android:color/transparent</item>
     </style>
+    <style name="customListViewStyle" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@drawable/item_selector</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+
+    <style name="MaterialEditTextStyle" parent="Theme.AppCompat.Light"></style>
 
 </resources>

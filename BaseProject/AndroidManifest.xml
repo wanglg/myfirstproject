@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="21" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     
     <application
@@ -27,6 +27,8 @@
         </activity>
            <activity
             android:name="com.example.activity.HomeActivity"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"
             android:configChanges="orientation|screenSize"
             >
         </activity>

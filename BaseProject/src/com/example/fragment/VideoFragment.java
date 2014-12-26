@@ -10,6 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class VideoFragment extends BaseFragment {
+	
+	public static VideoFragment getInstance() {
+		return new VideoFragment();
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {

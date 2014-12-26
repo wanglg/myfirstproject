@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 
 public class PhotoFragment extends BaseFragment {
+	
+	public static PhotoFragment getInstance() {
+		return new PhotoFragment();
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {

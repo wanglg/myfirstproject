@@ -13,9 +13,7 @@ public class FileUtil {
 
 	private static final String LOG_TAG = "FileUtil";
 
-	public static String getSdDirectory() {
-		return Environment.getExternalStorageDirectory().getPath();
-	}
+	private static String mSdRootPath = Environment.getExternalStorageDirectory().getPath();  
 
 	/**
 	 * @param src
